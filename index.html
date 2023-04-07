@@ -4,21 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Loopstudios landing page</title>
+    <script
+      src="https://kit.fontawesome.com/1792852f1f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="header container">
@@ -58,58 +67,134 @@
           class="product-img"
         />
         <h2 class="heading product-heading">The leader in interactive VR</h2>
-        <p class="product-text">
+        <p class="product-text heading">
           Founded in 2011, Loopstudios has been producing world-class virtual
           reality projects for some of the best companies around the globe. Our
           award-winning creations have transformed businesses through digital
           experiences that bind to their brand.
         </p>
       </article>
-      <section>
-        <h2>Our creations</h2>
-        <ul>
-          <li>
-            <img src="" alt="" />
+      <section class="creations">
+        <h2 class="heading creation-heading">Our creations</h2>
+        <ul class="creation-list">
+          <li class="creation-item">
+            <img
+              src="images/mobile/image-deep-earth.jpg"
+              alt="deep earth image"
+              class="creation-img"
+              width="200"
+            />
+            <p class="img-text heading">Deep earth</p>
           </li>
-          <!-- Deep earth
-        Night arcade
-        Soccer team VR
-        The grid
-        From up above VR
-        Pocket borealis
-        The curiosity
-        Make it fisheye -->
+          <li class="creation-item">
+            <img
+              src="images/mobile/image-night-arcade.jpg"
+              alt="night arcade image"
+              class="creation-img"
+              width="200"
+            />
+            <p class="img-text heading">Night arcade</p>
+          </li>
+          <li class="creation-item">
+            <img
+              src="images/mobile/image-soccer-team.jpg"
+              alt="soccer team image"
+              class="creation-img"
+              width="200"
+            />
+            <p class="img-text heading">Soccer team VR</p>
+          </li>
+          <li class="creation-item">
+            <img
+              src="images/mobile/image-grid.jpg"
+              alt="zoomed part of car with mobil and michelin slogans"
+              class="creation-img"
+              width="200"
+            />
+            <p class="img-text heading">The grid</p>
+          </li>
+          <li class="creation-item">
+            <img
+              src="images/mobile/image-from-above.jpg"
+              alt="some streets filmed up above"
+              class="creation-img"
+              width="200"
+            />
+            <p class="img-text heading">From up above VR</p>
+          </li>
+          <li class="creation-item">
+            <img
+              src="images/mobile/image-pocket-borealis.jpg"
+              alt="pocket borealis image"
+              class="creation-img"
+              width="200"
+            />
+            <p class="img-text heading">Pocket borealis</p>
+          </li>
+          <li class="creation-item">
+            <img
+              src="images/mobile/image-curiosity.jpg"
+              alt="the curiosity robot image"
+              class="creation-img"
+              width="200"
+            />
+            <p class="img-text heading">The curiosity</p>
+          </li>
+          <li class="creation-item">
+            <img
+              src="images/mobile/image-fisheye.jpg"
+              alt="fisheye image"
+              class="creation-img"
+              width="200"
+            />
+            <p class="img-text heading">Make it fisheye</p>
+          </li>
         </ul>
-        <a href=""> See all </a>
+        <a href="#creation" class="creation-btn"> See all </a>
       </section>
     </main>
-    <footer>
-      <img src="" alt="logo" />
-      <ul>
-        <li><a href=""> About </a></li>
-        <li><a href=""> Careers </a></li>
-        <li><a href=""> Events </a></li>
-        <li><a href=""> Products </a></li>
-        <li><a href=""> Support </a></li>
-      </ul>
-      <ul>
-        <li>
-          <a href=""> FAC </a>
-        </li>
-        <li>
-          <a href=""> TWI </a>
-        </li>
-        <li>
-          <a href=""> PIN </a>
-        </li>
-        <li>
-          <a href=""> INS </a>
-        </li>
-      </ul>
-      <p>© 2021 Loopstudios. All rights reserved.</p>
+    <footer class="container footer">
+      <img src="images/logo.svg" alt="logo" class="logo" />
+      <nav class="routes">
+        <ul class="route-list">
+          <li class="route-item"><a href="#about"> About </a></li>
+          <li class="route-item"><a href="#careers"> Careers </a></li>
+          <li class="route-item"><a href="#events"> Events </a></li>
+          <li class="route-item"><a href="#products"> Products </a></li>
+          <li class="route-item"><a href="#support"> Support </a></li>
+        </ul>
+      </nav>
+      <nav class="social-icons">
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="#facebook"
+              ><i class="fa-brands fa-square-facebook social-icon"></i
+            ></a>
+          </li>
+          <li class="social-item">
+            <a href="#twitter">
+              <i class="fa-brands fa-twitter social-icon"></i>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#pinterest">
+              <i class="fa-brands fa-pinterest social-icon"></i>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#instagram">
+              <i class="fa-brands fa-instagram social-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="copy">© 2021 Loopstudios. All rights reserved.</p>
       <div class="attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          id="fmentor"
+          target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">Your Name Here</a>.
       </div>

@@ -1,6 +1,17 @@
 const btnEl = document.querySelector(".btn");
 const headerEl = document.querySelector(".header");
 const imgEl = document.querySelector(".btn-img");
+const linksEl = document.querySelectorAll("a:not(#fmentor)");
+
+window.addEventListener("load", () => {
+  linksEl.forEach((a) => {
+    a.setAttribute("target", "_blank");
+    a.setAttribute(
+      "href",
+      "https://www.linkedin.com/in/alexsander-batista-dos-santos-1524278a/"
+    );
+  });
+});
 
 const imgSources = {
   btnClose: "images/icon-close.svg",

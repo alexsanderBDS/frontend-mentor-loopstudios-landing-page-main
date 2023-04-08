@@ -178,6 +178,10 @@ body {
   height: 100vh;
 }
 
+.nav-item {
+  position: relative;
+}
+
 .nav-item a:link,
 a:visited {
   text-decoration: none;
@@ -311,7 +315,7 @@ a:visited {
 
 .creation-btn:link,
 .creation-btn:visited {
-  display: block;
+  display: inline-block;
   border: var(--2ws) solid var(--color-pb);
   padding: var(--16ws) calc(50rem / 16);
 
@@ -322,7 +326,19 @@ a:visited {
   color: var(--color-pb);
 
   margin-bottom: var(--96ws);
+
+  transition: background 0.5s, color 0.5s, transform 0.5s;
 }
+
+/* ACTIVE STATE */
+
+.creation-btn:hover {
+  color: var(--color-pw);
+  background-color: var(--color-pb);
+  transform: scale(1.08);
+}
+
+/* ACTIVE STATE */
 
 .footer {
   display: grid;
@@ -349,11 +365,18 @@ a:visited {
   gap: var(--24ws);
   list-style: none;
 }
+.route-item {
+  position: relative;
+}
 
 .route-item a:link,
 .route-item a:visited {
   text-decoration: none;
   color: var(--color-pw);
+}
+
+.social-item {
+  position: relative;
 }
 
 .social-icons {
@@ -376,6 +399,76 @@ a:visited {
 }
 
 @media (min-width: calc(500em / 16)) {
+  /* ACTIVE STATES */
+  /* CAN BE REUSABLE */
+  .nav-item a::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 2px;
+    width: 20px;
+    background-color: var(--color-pw);
+    margin-top: 5px;
+    text-align: center;
+    opacity: 0;
+
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .nav-item a:hover::after {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+
+  /* ACTIVE STATES */
+
+  /* ACTIVE STATES */
+  /* CAN BE REUSABLE */
+  .route-item a::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 2px;
+    width: 20px;
+    background-color: var(--color-pw);
+    margin-top: 5px;
+    text-align: center;
+    opacity: 0;
+
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .route-item a:hover::after {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+  /* ACTIVE STATES */
+
+  /* ACTIVE STATES */
+  /* CAN BE REUSABLE */
+  .social-item a::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-pw);
+    margin-top: 5px;
+    text-align: center;
+    opacity: 0;
+
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .social-item a:hover::after {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+  /* ACTIVE STATES */
+
   .container {
     min-width: 100%;
   }
@@ -399,7 +492,7 @@ a:visited {
     height: var(--48ws);
     left: 100%;
     transform: translateX(-100%);
-    padding: var(--12ws) 0;
+    padding: var(--12ws) var(--32ws);
   }
 
   .nav-list {
@@ -429,11 +522,12 @@ a:visited {
   .header {
     background-image: url(images/desktop/image-hero.jpg);
     background-position: center;
+    height: 70vh;
   }
 
   .main-heading {
     grid-column: 1/-1;
-    max-width: 500px;
+    margin-right: 40%;
     justify-self: start;
   }
   .main-heading h1 {
@@ -486,6 +580,24 @@ a:visited {
 }
 
 @media (min-width: calc(900em / 16)) {
+  .header {
+    height: 95vh;
+  }
+
+  .main-heading,
+  .nav-header,
+  .nav {
+    margin-top: var(--32ws);
+  }
+
+  .nav-header img {
+    width: calc(150rem / 16);
+  }
+
+  .main-heading h1 {
+    font-size: var(--74px);
+  }
+
   .product {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -519,7 +631,56 @@ a:visited {
   }
 
   .creation-item img {
-    max-width: calc(256rem / 16);
+    max-width: 100%;
     max-height: calc(450rem / 16);
+  }
+}
+@media (min-width: calc(1000em / 16)) {
+  .container {
+    padding: 0 var(--128ws);
+  }
+
+  .root {
+    max-width: calc(1440rem / 16);
+    margin: auto;
+  }
+
+  .product {
+    margin-bottom: var(--128ws);
+  }
+
+  .product-info {
+    min-width: 50%;
+    min-height: 80%;
+  }
+
+  .creations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .creation-heading {
+    grid-area: 1 / 1;
+    justify-self: start;
+    margin: 0;
+    font-size: var(--52px);
+  }
+
+  .creation-btn:link,
+  .creation-btn:visited {
+    grid-area: 1 / 2;
+    justify-self: end;
+    margin: 0;
+  }
+
+  .creation-list {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: var(--80ws) 0;
+  }
+
+  .product-text {
+    text-align: start;
+    font-size: 125%;
   }
 }

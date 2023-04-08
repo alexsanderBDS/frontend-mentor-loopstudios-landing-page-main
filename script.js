@@ -1,7 +1,7 @@
 const btnEl = document.querySelector(".btn");
 const headerEl = document.querySelector(".header");
 const imgEl = document.querySelector(".btn-img");
-const linksEl = document.querySelectorAll("a:not(#fmentor)");
+const linksEl = document.querySelectorAll("a:not(#fmentor):not(#github)");
 
 window.addEventListener("load", () => {
   linksEl.forEach((a) => {
